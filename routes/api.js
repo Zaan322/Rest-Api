@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['@scytfdhd._','@scytfdhd._','@scytfdhd._','@scytfdhd._', '@scytfdhd._','@scytfdhd._','@scytfdhd._'];
+var creatorList = ['@zanganzz_','@zanganzz_','@zanganzz_','@zanganzz_', '@zanganzz_','zanganzz_','@scytfdhd._'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -163,7 +163,7 @@ var len = 15
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'dappabotwa') return res.json(loghandler.invalidKey)
+    if (apikey != 'toukabotwa') return res.json(loghandler.invalidKey)
 
     try {
         zahirr.find()
@@ -364,7 +364,7 @@ router.get('/infonpm', async (req, res, next) => {
             query = req.query.query
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'dappabotwa') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'toukabot') return res.json(loghandler.invalidKey)
     if (!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://registry.npmjs.org/${query}`))
